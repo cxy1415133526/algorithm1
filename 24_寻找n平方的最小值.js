@@ -1,4 +1,15 @@
-var n=Math.sqrt(12000);
-for( var i=1;i<n;i++){        
+// 【n方大于12000的最小数字】
+// var n=0;
+// while(true){
+//     n++;
+//     if(n * n>=12000){
+//         break;
+//     }
+// }
+// console.log(n);
+
+var n=0;
+while(n*n<12000){
+    n++;   
 }
-console.log(i);
+console.log(n);
