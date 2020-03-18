@@ -11,7 +11,7 @@ for(var i=0;i<arr.length;i++){
     _arr=item.split(' ')
    console.log(_arr);
    
-
+不会
 }
 
 
