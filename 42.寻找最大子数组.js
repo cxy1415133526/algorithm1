@@ -19,7 +19,7 @@ for( var j=0;j<newarr.length-1;j++){
         var temp=newarr[j];
         newarr[j]=newarr[j+1];
         newarr[j+1]=temp;
-        j--
+        
     }
 }
 var resultarr=newarr.slice(newarr.length-4,newarr.length);
