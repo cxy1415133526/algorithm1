@@ -9,28 +9,24 @@ var arr=str.split('\r\n');
 var yw=0;
 var sx=0;
 var yy=0;
-var count=20000;
+
 for(var i=0;i<arr.length;i++){
     var item=arr[i];
     _arr=item.split(' ')
    
     // 计算语文的及格人数
-  if (Number(_arr[3]) >= 60) {
-      yw++;
-  }
+  if (Number(_arr[3]) >= 60) yw++;
   // 计算数学的及格人数
-  if (Number(_arr[5]) >= 60) {
-    sx++;
-  }
+  if (Number(_arr[5]) >= 60) sx++;
+  
   // 计算英语的及格人数
-  if (Number(_arr[7]) >= 60) {
-    yy++;
-  }
+  if (Number(_arr[7]) >= 60) yy++;
+  
 }
 // 统计语文、数学和英语的及格率
-var _yw = Math.round(yw / 20000*100*100)/100
-var _sx = Math.round(sx / 20000*100*100)/100
-var _yy = Math.round(yy / 20000*100*100)/100
+var _yw = Math.round(yw / arr.length*100*100)/100
+var _sx = Math.round(sx / arr.length*100*100)/100
+var _yy = Math.round(yy / arr.length*100*100)/100
 console.log(
   `语文的及格率是${_yw}%,数学的及格率是${_sx}%,英语的及格率是${_yy}%`
 );
