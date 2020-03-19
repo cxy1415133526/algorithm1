@@ -3,7 +3,7 @@ var count = 0;
 var rowstr = '';
 for (var i = 100; i < 1000; i++) {
     if (i % 30 == 0) {
-        rowstr += i + ' ';
+        rowstr += i + '\t';
         count++;
 
         if (count == 10) {
