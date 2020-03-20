@@ -3,7 +3,7 @@ function ZeroSort(n){
     //将数字转为字符串再拆成数组
     var str=n.toString();
     var sum=0;
-    for(var i=0;i<arr.length;i++){
+    for(var i=0;i<str.length;i++){
         if(str[i]==0){
             sum++;
         }
@@ -14,7 +14,7 @@ function ZeroSort(n){
 function bubbleSoft(arr){
     for(var i=0;i<arr.length-1;i++){
         for(var j=0;j<arr.length-1-i;j++){
-            if(ZeroSort(arr[j])>ZeroSort(arr[j+1])){
+            if(ZeroSort(arr[j])>ZeroSort(arr[j+1])){//比较数组里每项含0的个数
                 var tempt=arr[j];
                 arr[j]=arr[j+1];
                 arr[j+1]=tempt;
