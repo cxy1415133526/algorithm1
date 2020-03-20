@@ -10,9 +10,18 @@ function ZeroSort(n){
     }
     return sum;
 }
-var arr=[1030,56000,20300040,20,8933,28001020]
-arr.sort(function(a,b){
-    return  ZeroSort(a)- ZeroSort(b);
-})
-
-console.log(arr);
+function bubbleSoft(arr){
+    for(var i=0;i<arr.length-1;i++){
+        for(var j=0;j<arr.length-1-i;j++){
+            if(ZeroSort(arr[j])>ZeroSort(arr[j+1])){
+                var tempt=arr[j];
+                arr[j]=arr[j+1];
+                arr[j+1]=tempt;
+            }
+        }
+    }
+    return arr;
+}
+var arr=[1030,56000,20300040,20,8933,28001020];
+var a=bubbleSoft(arr);
+console.log(a);

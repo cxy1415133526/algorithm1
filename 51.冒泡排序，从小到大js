@@ -1,0 +1,19 @@
+// 以小到大的顺序排列
+
+function bubbleSort(arr){
+    for(var i=0;i<arr.length-1;i++){
+        for(j=0;j<arr.length-1-i;j++){
+            if(arr[j]>arr[j+1]){
+                var tempt=arr[j];
+                arr[j]=arr[j+1];
+                arr[j+1]=tempt;
+            }
+        }
+    }
+    return arr;
+}
+var arr=[1030, 56000, 20300040, 20, 8933, 28001020];
+var a =bubbleSort(arr);
+console.log(a);
+
+
