@@ -15,6 +15,7 @@ function quickSort(arr){
     return quickSort(small).concat(a,quickSort(big));
     
 }
-console.log(quickSort([1, 5, 3, 9, 8,7, -2, -8, -4, -3]));
-var _arr=arr.slice(arr.length-4,arr.length);
-console.log(_arr);
+var arr=[1, 5, 3, 9, 8,7, -2, -8, -4, -3];
+var _arr=quickSort(arr);
+var newArr=_arr.slice(0,6);//提取哪一项，就将它的下标放里面，包含开始项，但不包含最后一项
+console.log(newArr);

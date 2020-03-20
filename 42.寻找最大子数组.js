@@ -3,38 +3,32 @@
 // 再比如数组[1, 2, 3, 4]，符合要求的子数组为[1, 2, 3, 4]，其最大和为 10。
 // 再比如数组[-5, 6, -2, -3, 4]，符合要求的子数组为[6, -2, -3, 4]，其最大和为5。
 
-var arr = [1, 5, 3, 9, 8,7, -2, -8, -4, -3];
-var newarr = [];
-var max = arr[0];
-var min = arr[0];
-for (var i = 0; i < arr.length; i++) {
-    if (arr[i] > max) {
-        newarr.push(arr[i]);      
-    }else if(arr[i]<min){
-        newarr.unshift(arr[i])
-    }
-}
-for( var j=0;j<newarr.length-1;j++){
-    if(newarr[j]>newarr[j+1]){
-        var temp=newarr[j];
-        newarr[j]=newarr[j+1];
-        newarr[j+1]=temp;
-        
-    }
-}
-var resultarr=newarr.slice(newarr.length-4,newarr.length);
+var arr = [-2, 2, -3, 4, -1, 2, 1, -5];
 
-for( var j1=0;j1<resultarr.length-1;j1++){
-    if(resultarr[j1]>resultarr[j1+1]){
-        var temp=resultarr[j1];
-        resultarr[j1]=resultarr[j1+1];
-        resultarr[j1+1]=temp;
-        
-    }
-}console.log(resultarr);
+// 最大值
+var max = -2;
+// 出现最大的时候的i值
+var max_i = 0;
+// 出现最大的时候的j值
+var max_j = 0;
 
-var sum=0;
-for(var k=0;k<resultarr.length;k++){
-    sum+=resultarr[k];
+// i是开始
+for (var i = 0; i <= arr.length - 1; i++) {
+    // j是结束
+    for (var j = i; j <= arr.length - 1; j++) {
+        var sum = 0;
+        // 把开始到结束累加上
+        for (var k = i; k <= j; k++) {
+            sum += arr[k];
+        }
+        // 如果这个数组的总和大于max，那么它自己就是max
+        if (sum > max) {
+            max = sum;
+            // 输出它，slice表示子数组
+            max_i = i;
+            max_j = j;
+        }
+    }
 }
-console.log(sum);
+
+console.log(arr.slice(max_i, max_j + 1));
