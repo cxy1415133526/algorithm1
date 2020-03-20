@@ -13,7 +13,9 @@ function calcZero(n){
     }
     return sum;
 }
-var findZero=calcZero(503060);
-console.log(findZero);
+// var findZero=calcZero(503060);
+// console.log(findZero);
+console.log(calcZero(503060));
+
 
 
