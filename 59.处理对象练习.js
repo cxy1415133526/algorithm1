@@ -953,30 +953,27 @@ var obj = {
     }
 }
 var arr=[];
+var total=0;
 var fl = obj.products;
 for (var i in fl) {
     // console.log(fl[i]); //遍历对象，找到你要的
-    // // jtlb = fl[i];   //属性值是个数组，数组里又有个对象，继续遍历对象
+    // // jtlb = fl[i];   //属性值是个数组，数组里又有个对象，继续遍历数组
     var lbprice = 0;
     for (var j in fl[i]) {
-        console.log(j,fl[i][j]);
+        // console.log(j,fl[i][j]);
         
         lbprice += fl[i][j].price;//同类型产品的价钱和
+        total+=lbprice;
     }
     arr.push({'mc':i,'jg':lbprice})
-    // console.log(arr);
+   
 }
+console.log(arr);
+console.log(`所有产品的总价：${total}`);
 
 
 
-// 坚果礼盒
-//     果干蜜饯
-//     糖巧布丁
-//     肉食卤味
-//     豆干辣条
-//     面包蛋糕
-//     饼干膨化
-//     鱿鱼海味
+
 
 
 

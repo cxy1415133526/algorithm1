@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        .box {
+            width: 500px;
+            height: 1000px;
+            
+            margin: 20px auto;
+        }
+
+        .box1 {
+            width: 100px;
+            height: 100px;
+            
+            background-color: red;
+            border: 1px solid #000;
+        }
+        button{
+            margin-top: 20px;
+            width: 200px;
+            height: 200px;
+        }
+        img{
+            width: 150px;
+            height: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="box1" id="box1">触碰图片我会变色，点击图片我就变成原来的颜色哦</div>
+        <button id="btn">
+            <img src="./jfm.jfif" alt="" id="img">
+        </button>
+
+    </div>
+
+    <script>
+        var box1 = document.getElementById('box1');
+        var btn = document.getElementById('btn');
+        var img =document.getElementById('img');
+    
+        btn.onclick=function(){
+            box1.style.background='red'
+        }
+        btn.onmouseenter = function () {
+            img.src='xiaochai.jpg';
+            box1.style.background='orange';
+        }
+        btn.onmouseleave = function () {
+            img.src='jfm.jfif';
+            box1.style.background='green'
+        }
+    </script>
+</body>
+
+</html>

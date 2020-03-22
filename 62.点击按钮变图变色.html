@@ -1,0 +1,99 @@
+<style>
+    .box {
+        width: 450px;
+        height: 1000px;
+        margin: 50px auto;
+    }
+
+    img {
+        width: 450px;
+        height: 400px;
+    }
+
+    .btn1{
+        width: 225px;
+        float: left;
+    }
+    .btn2{
+        width: 225px;
+        float: left;
+    }
+    /* .bt{
+        position: relative;
+    } */
+    /* .btn1 {position: absolute;top: 0;left: 0;}
+
+    .btn2 {position: absolute;top: 0;right:0 ;} */
+    .bt{
+        margin:10px 0 50px;
+
+    }
+    .box1{
+        float: left;
+        width: 150px;
+        height: 200px;
+        background-color:blue;
+    }
+    .box2{
+        float: left;
+        width: 150px;
+        height: 200px;
+        background-color:pink;
+    }
+    .box3{
+        float: left;
+        width: 150px;
+        height: 200px;
+        background-color:orange;
+    }
+    .btn3{float: left;width: 150px;}
+    .btn4{float: left;width: 150px;}
+    .btn5{float: left;width: 150px;}
+    .bt1{
+        margin-top: 10px;
+    }
+</style>
+</head>
+
+<body>
+<div class="box">
+    <img src="xiaochai.jpg" alt="" id="dog">
+    <div class="bt">
+        <button id="btn1"class="btn1">看加菲</button>
+        <button id="btn2" class="btn2">看小柴</button>
+    </div>
+    <div class="box1" id="box1">蓝色</div>
+    <div class="box2" id="box2">粉色</div>
+    <div class="box3" id="box3">橘色</div>
+    <div class="bt1">
+    <button id="btn3" class="btn3">橘色</button>
+    <button id="btn4" class="btn4">蓝色</button>
+    <button id="btn5" class="btn5">粉色</button>
+</div>
+    <script>
+        var dog=document.getElementById('dog');
+        var btn1=document.getElementById('btn1');
+        var btn2=document.getElementById('btn2');
+        btn1.onclick=function(){
+            dog.src='jfm.jfif';
+        }
+        btn2.onclick=function(){
+            dog.src='xiaochai.jpg';
+        }
+
+        var box1=document.getElementById('box1');
+        var box2=document.getElementById('box2');
+        var box3=document.getElementById('box3');
+        var btn3=document.getElementById('btn3');
+        var btn4=document.getElementById('btn4');
+        var btn5=document.getElementById('btn5');
+        btn3.onclick=function(){
+            box1.style.background='orange';                
+        };
+        btn4.onclick=function(){
+            box2.style.background='blue';                
+        };
+        btn5.onclick=function(){
+            box3.style.background='pink';                
+        };
+    </script>
