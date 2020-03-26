@@ -86,7 +86,7 @@ var arr = [12, 32, -10, 4, 53, 52, 522]
 // inn(9);
 // inn(10);
 // inn(11);
-console.log(null==undefined);
+console.log(null==undefined);            //true
 
 // 闭包 偏函数 ，外部的函数参数调整了内部函数的具体细节
 // function fun(a) {
