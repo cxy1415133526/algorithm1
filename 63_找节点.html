@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{  width: 100px;
+            height: 100px;
+            background: #333;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box" id="box">
+        <p></p>
+        <p></p>
+        <p></p>
+    </div>
+    <script>
+        var box=document.getElementById('box') ;
+        // alert(box.childNodes.length); //7
+        //因为它把p上下空白节点也当作了它的节点
+        // box.childNodes[1].style.background='red';//这样虽然能获取但是不方便
+        
+        //得到元素子节点
+        function getElementChilds(parentNode){
+            var childs=parentNode.childNodes;
+            //准备一个数组
+            var arr=[];
+            // 遍历找到真正的标签节点
+            for( var i=0;i<childs.length;i++){
+                if(childs[i].nodeType==1){
+                    arr.push(childs[i]);
+                }
+            }
+            return arr;
+        }
+        var cs=getElementChilds(box);
+        alert(cs.length); //3
+        //让第一个节点变红
+        cs[0].style.background='red';
+    </script>
+</body>
+</html>
